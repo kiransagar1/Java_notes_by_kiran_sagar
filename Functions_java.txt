@@ -1,0 +1,62 @@
+Functions  
+        A method is a block of code which only runs when it is called.  
+    Why use methods? 
+        To reuse code: define the code once, and use it many times.
+Types of Methods
+    In Java, methods can be categorized in two main ways:
+    1. Predefined vs. User-defined:
+        Predefined methods: These methods are already defined in the Java Class Library and can be used directly without any declaration.
+            Examples include System.out.println() for printing to the console and Math.max() for finding the maximum of two numbers.
+        User-defined methods: These are methods that you write yourself to perform specific tasks within your program. 
+Syntax:
+    returnType methodName() {
+    // method body
+    }
+
+    returnType - It specifies what type of value a method returns.
+    methodName - It is an identifier that is used to refer to the particular method in a program.
+    method body - It includes the programming statements that are used to perform some tasks.body is enclosed inside the curly braces { }.
+Code:
+    class Main {
+    // create a method
+    public int addNumbers(int a, int b) {
+        int sum = a + b;
+        // return value
+        return sum;
+    }
+    public static void main(String[] args) {
+        int num1 = 25;
+        int num2 = 15;
+        // create an object of Main
+        Main obj = new Main();
+        // calling method
+        int result = obj.addNumbers(num1, num2);
+        System.out.println("Sum is: " + result);
+    }
+    }
+Method with Parameter and without Parameter   
+    class Main {
+
+    // method with no parameter
+    public void display1() {
+        System.out.println("Method without parameter");
+    }
+
+    // method with single parameter
+    public void display2(int a) {
+        System.out.println("Method with a single parameter: " + a);
+    }
+
+    public static void main(String[] args) {
+        
+        // create an object of Main
+        Main obj = new Main();
+
+        // calling method with no parameter
+        obj.display1();
+        
+        // calling method with the single parameter
+        obj.display2(24);
+    }
+    }
+

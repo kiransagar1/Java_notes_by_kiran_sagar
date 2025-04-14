@@ -1,0 +1,242 @@
+Java Control Statements | Control Flow in Java
+    Java provides three types of control flow statements.
+        1.Decision Making statements
+            1.Simple if statement
+            2.if-else statement
+            3.if-else-if ladder
+            4.Nested if-statement
+        2.switch statement
+        3.Loop statements
+            1.do while loop
+            2.while loop
+            3.for loop
+        .Jump statements
+            1.break statement
+            2.continue statement
+Conditional Statements
+        1.Simple if statement
+        2.if-else statement
+        3.if-else-if ladder
+        4.Nested if-statement
+    1.Simple if statement:It is the most basic statement among all control flow statements in Java. 
+        It evaluates a Boolean expression and enables the program to enter a block of code if the expression evaluates to true.
+    Syntax:
+        if(condition) 
+        {    
+        statement 1; //executes when condition is true   
+        }    
+    Code:
+        int x = 10;    
+        int y = 12;    
+        if(x+y > 20) 
+        {   
+        System.out.println("x + y is greater than 20");
+        }    
+    2.if-else statement:The if-else statement is an extension to the if-statement, 
+        which uses another block of code, i.e., else block. The else block is executed if the condition of the if-block is evaluated as false.
+    Syntax:
+        if(condition) 
+        {    
+        statement 1; //executes when condition is true   
+        }  
+        else{  
+        statement 2; //executes when condition is false   
+        }  
+    Code:
+        int x = 10;  
+        int y = 12;  
+        if(x+y < 10) 
+        {  
+        System.out.println("x + y is less than      10");  
+        }   
+        else 
+        {  
+        System.out.println("x + y is greater than 20");  
+        }  
+
+    3.if-else-if ladder:The if-else-if statement contains the if-statement followed by multiple else-if statements.
+    Syntax:
+        if(condition 1) 
+        {    
+        statement 1; //executes when condition 1 is true   
+        }  
+        else if(condition 2) 
+        {  
+        statement 2; //executes when condition 2 is true   
+        }  
+        else 
+        {  
+        statement 2; //executes when all the conditions are false   
+        }
+    Code:
+        String city = "Hyd";  
+        if(city == "Hyd") 
+        {  
+        System.out.println("city is Hyd");  
+        }
+        else if (city == "Vizag") 
+        {  
+        System.out.println("city is Vizag");  
+        }
+        else if(city == "Banglore") 
+        {  
+        System.out.println("city is Banglore");  
+        }
+        else 
+        {  
+        System.out.println(city);  
+        }  
+    4.Nested if-statementIn nested if-statements, the if statement can contain a if or if-else statement inside another if or else-if statement.
+    Syntax:
+        if(condition 1) 
+        {    
+        statement 1; //executes when condition 1 is true   
+            if(condition 2) 
+            {  
+            statement 2; //executes when condition 2 is true   
+            }  
+        else
+            {  
+        statement 2; //executes when condition 2 is false   
+            }  
+        }     
+    Code:
+        int a = 10;
+        int b = 20;
+        // Outer if condition
+        if (a == 10) 
+        {
+            // Inner if condition
+            if (b == 20) 
+            {
+                System.out.println("PythonLife");
+            }
+        }
+    5.Switch Case:The switch case in java is used to select one of many code blocks for execution.
+        Default keyword: The keyword is used to specify the code executed when the expression does not match any test case.
+        1.Two cases cannot have the same value
+        2.Duplicate case values are not allowed.
+        3.There can be one or N number of case values for a switch expression.
+        4.The case value must be of switch expression type only. The case value must be literal or constant. It doesn't allow variables.
+        5.Each case statement can have a break statement which is optional. When control reaches to the break statement, it jumps the control after the switch expression. If a break statement is not found, it executes the next case.
+        6.The case value can have a default label which is optional.
+    Syntax:
+        switch(expression)
+        {    
+            case value1:    
+                //code to be executed;    
+            break;  //optional  
+            case value2:    
+                //code to be executed;    
+            break;  //optional  
+            ......     
+            default:     
+                code to be executed if all cases are not matched;  
+        }  
+    Code:
+         //Declaring a variable for switch expression  
+        int number=20;  
+        //Switch expression  
+        switch(number)
+        {  
+            //Case statements  
+            case 10: 
+                System.out.println("10");  
+            break;  
+            case 20: 
+                System.out.println("20");  
+            break;  
+            case 30: 
+                System.out.println("30");  
+            break;  
+            //Default case statement  
+            default:
+                System.out.println("Not in 10, 20 or 30");  
+        }  
+Looping Statements
+    When you know exactly how many times you want to loop through a block of code, use the for loop instead of a while loop:
+    In computer programming, loops are used to repeat a block of code. For example, if you want to show a message 100 times, then rather than typing the same code 100 times, you can use a loop.
+    1.For
+    2.While 
+    3.Do While
+    1.For Loop: Java for loop is used to run a block of code for a certain number of times.
+    Syntax:
+        for (initialExpression; testExpression; updateExpression) 
+        {
+        // body of the loop
+        }
+
+    Example:
+        int n = 5;
+        // for loop  
+        for (int i = 1; i <= n; ++i) 
+        {
+            System.out.println("Java is fun");
+        }
+
+    1.The initialExpression initializes and/or declares variables and executes only once.
+    2.The condition is evaluated. If the condition is true, the body of the for loop is executed.
+    3.The updateExpression updates the value of initialExpression.
+    4.The condition is evaluated again. The process continues until the condition is false.
+    
+    2.While Loop:The while loop loops through a block of code as long as a specified condition is true
+    Syntax:
+        while (condition) 
+        {
+        // code block to be executed
+        }
+    In the example below, the code in the loop will run, over and over again, as long as a variable (i) is less than 5:
+        int i = 0;
+    while (i < 5) 
+        {
+        System.out.println(i);
+        i++;
+        }
+    3.Do/While Loop:The do/while loop is a variant of the while loop. This loop will execute the code block once, 
+    before checking if the condition is true,then it will repeat the loop as long as the condition is true.
+    Syntax:
+    do {
+    // code block to be executed
+        }
+    while (condition)
+    Code:
+    The example below uses a do/while loop. The loop will always be executed at least once, even if the condition is false, because the code block is executed before the condition is tested:
+    int i = 0;
+    do 
+    {
+    System.out.println(i);
+    i++;
+    }
+    while (i < 5);
+    
+    Example:
+    int countdown = 3;
+    while (countdown > 0) 
+    {
+      System.out.println(countdown);
+      countdown--;
+    }
+    System.out.println("Happy Birthday!!");
+Jumping Statements:
+    1.Java Break:The break statement can also be used to jump out of a loop.
+    Code:
+     for (int i = 0; i < 10; i++) {
+      if (i == 4) {
+        break;
+      }
+      System.out.println(i);
+    }  
+    2.Java Continue:The continue statement breaks one iteration (in the loop), if a specified condition occurs, and continues with the next iteration in the loop.
+    Code:
+        for (int i = 0; i < 10; i++) {
+        if (i == 4) 
+        {
+        continue;
+        }
+        System.out.println(i);
+        }
+
+
+
+
+

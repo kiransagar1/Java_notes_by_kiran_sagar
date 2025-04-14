@@ -1,0 +1,87 @@
+Java Strings
+    In Java, a string is a sequence of characters. For example, "kiran" is a string containing a sequence of characters 'k', 'i', 'r', 'a', and 'n'.
+    We use double quotes to represent a string in Java.
+    // create a string
+    String Name = "PythonLife";
+    
+    // create strings
+    String first = "Python";
+    String second = "PythonLife";
+    String third = "PythonLifeKiran";
+
+    // print strings
+    System.out.println(first);   
+    System.out.println(second); 
+    System.out.println(third);  
+Java String Operations
+1. Get the Length of a String:
+        To find the length of a string, we use the length() method.
+
+    // create a string
+    String greet = "Namasthe Bhai";
+    System.out.println("String: " + greet);
+
+    // get the length of greet
+    int length = greet.length();
+    System.out.println("Length: " + length);
+2.Join Two Java Strings
+    We can join two strings in Java using the concat() method.
+    
+    // create first string
+    String first = "Python ";
+    System.out.println("First String: " + first);
+
+    // create second
+    String second = "Life";
+    System.out.println("Second String: " + second);
+
+    // join two strings
+    String joinedString = first.concat(second);
+    System.out.println("Joined String: " + joinedString);
+3. Compare Two Strings
+    In Java, we can make comparisons between two strings using the equals() method.
+      // create 3 strings
+    String first = "java programming";
+    String second = "java programming";
+    String third = "python programming";
+
+    // compare first and second strings
+    boolean result1 = first.equals(second);
+    System.out.println("Strings first and second are equal: " + result1);
+
+    // compare first and third strings
+    boolean result2 = first.equals(third);
+    System.out.println("Strings first and third are equal: " + result2);
+4.Java String contains
+    The contains() method checks whether the specified string (sequence of characters) is present in the string or not.
+
+    String str1 = "Java String contains()";
+    // check if str1 contains "Java"
+    boolean result = str1.contains("Java");
+    System.out.println(result);
+5.Java String replace
+    The replace() method replaces each matching occurrence of a character/text in the string with the new character/text.
+    String str1 = "bat ball";
+    // replace b with c
+    System.out.println(str1.replace('b', 'c'));
+6.Java String toLowerCase
+    The toLowerCase() method converts all characters in the string to lowercase characters.
+    
+    String str1 = "JAVA PROGRAMMING";
+    // convert to lower case letters
+    System.out.println(str1.toLowerCase());
+7.Java String trim
+    The trim() method removes any leading (starting) and trailing (ending) whitespaces from the specified string.
+    
+    String str1 = "   Learn Java Programming      ";
+    System.out.println(str1.trim());
+8.Java String isEmpty()
+    String str1 = "Java Programming";
+    String str2 = "";
+    System.out.println(str1.isEmpty()); // false
+    System.out.println(str2.isEmpty()); // true
+Create Java Strings Using the New Keyword
+    // create a string using new
+    String name = new String("Java String");
+
+    System.out.println(name);  // print Java String

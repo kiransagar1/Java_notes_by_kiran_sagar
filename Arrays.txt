@@ -1,0 +1,94 @@
+Array Defination
+    Arrays are fundamental structures in Java that allow us to store multiple values of the same type in a single variable.
+    1.In Java, all arrays are dynamically allocated.
+    2.Arrays may be stored in contiguous memory.
+    3.Since arrays are objects in Java, we can find their length using the object property length. This is different from C/C++, where we find length using size of.
+    4.A Java array variable can also be declared like other variables with [] after the data type.
+    5.It is the simplest data structure where each data element can be accessed directly by only using its index number.
+    6.The variables in the array are ordered, and each has an index beginning with 0.
+1. Array Declaration
+    Syntax:
+        Method 1: type var-name[]; 
+        Method 2: type[] var-name;
+    type: The data type of the array elements (e.g., int, String).
+    arrayName: The name of the array.                                  
+2. Create an Array
+    To create an array
+    int a[]={33,3,4,5};//declaration, instantiation and initialization   
+3. Access an Element of an Array
+    We can access array elements using their index, which starts from 0:
+    // Accessing the first element
+    int a[]={33,3,4,5};
+    System.out.println(a[0]); 
+4. Change an Array Element
+    To change an element, assign a new value to a specific index:
+    // Changing the first element to 20
+    int a[]={33,3,4,5};
+    System.out.println("Before" +a[0]);
+    a[0] =1222;
+    System.out.println("After" +a[0]);
+5. Array Length
+    We can get the length of an array using the length property:
+    // Getting the length of the array
+    int a[]={33,3,4,5};
+    int length = a.length;
+    System.out.println("Length" +length);
+Types of Arrays in Java
+    1. Single-Dimensional Arrays
+        These are the most common type of arrays, where elements are stored in a linear order.
+        // A single-dimensional array
+            int[] singleDimArray = {1, 2, 3, 4, 5}; 
+    2. Two-Dimensional Arrays
+        Arrays with more than one dimension, such as two-dimensional arrays (matrices).
+        // A 2D array (matrix)
+        int[][] multiDimArray = { 
+            {1, 2, 3},
+            {4, 5, 6},
+            {7, 8, 9} }; 
+    3. Multi-Dimensional Arrays
+        // 3D array
+        int[][][] intArray = new int[10][20][10];   
+Java One Dimensional Array
+        // declares an Array of integers.
+        int[] arr;
+        // allocating memory for 5 integers.
+        arr = new int[5];
+        // initialize the elements of the array
+        // first to last(fifth) element
+        arr[0] = 10;
+        arr[1] = 20;
+        arr[2] = 30;
+        arr[3] = 40;
+        arr[4] = 50;
+        // accessing the elements of the specified array
+        for (int i = 0; i < arr.length; i++)
+            System.out.println("Element at index "+ i + " : " + arr[i]);  
+Java Two Dimensional Array
+     // Two Dimensional Array 
+// Declared and Initialized
+        int[][] arr = new int[3][3];
+        // Number of Rows
+        System.out.println("Rows : " + arr.length);
+        // Number of Columns
+        System.out.println("Columns : " + arr[0].length);
+        // declaring and initializing 2D array
+        int arrr[][] = { { 2, 7, 9 }, { 3, 6, 1 }, { 7, 4, 2 } };
+        // printing 2D array
+        for (int i = 0; i < 3; i++) {
+            for (int j = 0; j < 3; j++) {
+                System.out.print(arrr[i][j] + " ");
+            }
+            System.out.println();
+        }
+Loop Through an Array
+     String[] cars = {"Royal Enfield", "BMW", "Java", "Hero"};
+     for (int i = 0; i < cars.length; i++) {
+             System.out.println(cars[i]);
+         }
+2d Array Access Elements
+    int[][] myNumbers = { {1, 2, 3, 4}, {5, 6, 7} };
+    System.out.println(myNumbers[1][2]); // Outputs 7
+2d Array Change Elements
+    int[][] myNumbers = { {1, 2, 3, 4}, {5, 6, 7} };
+    myNumbers[1][2] = 9;
+    System.out.println(myNumbers[1][2]); // Outputs 9 instead of 7

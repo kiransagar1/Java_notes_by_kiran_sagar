@@ -1,0 +1,90 @@
+Types of Operators in Java
+    1.Arithmetic Operators
+    2.Unary Operators
+    3.Assignment Operator
+    4.Relational Operators
+    5.Logical Operators
+    6.Ternary Operator
+    7.Bitwise Operators
+//Arithmetic Operators
+    * : Multiplication
+    / : Division
+    % : Modulo
+    + : Addition
+    – : Subtraction
+    Code:
+        int a = 10;
+        int b = 3; 
+        System.out.println("a + b = " + (a + b));
+        System.out.println("a - b = " + (a - b));
+        System.out.println("a * b = " + (a * b));
+        System.out.println("a / b = " + (a / b));
+        System.out.println("a % b = " + (a % b));
+//Unary Operators
+    Unary Operators need only one operand. 
+    ++ , Increments by 1.
+        Post-Increment: Uses value first, then increments.
+        Pre-Increment: Increments first, then uses value.
+    -- , Decrements by 1.
+        Post-Decrement: Uses value first, then decrements.
+        Pre-Decrement: Decrements first, then uses value.
+    Code:  
+        int a = 10;
+        int b = 10;
+        // Using unary operators
+        System.out.println("Postincrement : " + (a++));
+        System.out.println("Preincrement : " + (++a));
+
+    System.out.println("Postdecrement : " + (b--));
+    System.out.println("Predecrement : " + (--b));
+//Assignment Operator
+        += , Add and assign.
+        -= , Subtract and assign.
+        *= , Multiply and assign.
+        /= , Divide and assign.
+        %= , Modulo and assign.
+    Code:
+        int f=1;
+        System.out.println("f += 3: " + (f += 3));
+        System.out.println("f -= 2: " + (f -= 2));
+        System.out.println("f *= 4: " + (f *= 4));
+        System.out.println("f /= 3: " + (f /= 3));
+//Relational Operators
+        == , Equal to.
+        != , Not equal to.
+        < , Less than.
+        <= , Less than or equal to.
+        > , Greater than.
+        >= , Greater than or equal to.
+    Code:
+        int a = 10;
+        int b = 3;
+        int c = 5;
+
+        System.out.println("a > b: " + (a > b));
+        System.out.println("a < b: " + (a < b));
+        System.out.println("a >= b: " + (a >= b));
+        System.out.println("a <= b: " + (a <= b));
+        System.out.println("a == c: " + (a == c));
+        System.out.println("a != c: " + (a != c));
+//Logical Operators
+    &&, Logical AND: returns true when both conditions are true.
+    ||, Logical OR: returns true if at least one condition is true.
+    !, Logical NOT: returns true when a condition is false and vice-versa
+    Code:
+        boolean x = true;
+        boolean y = false;
+        System.out.println("x && y: " + (x && y));
+        System.out.println("x || y: " + (x || y));
+        System.out.println("!x: " + (!x));
+//Ternary operator
+    The Ternary Operator is a shorthand version of the if-else statement. It has three operands and hence the name Ternary. The general format is ,
+                condition ? if true : if false 
+    if the condition evaluates to true, then execute the statements after the ‘?’ else execute the statements after the ‘:’. 
+        int n1 = 5, n2 = 10, max;
+        System.out.println("First num: " + n1);
+        System.out.println("Second num: " + n2);
+        // Largest among n1 and n2
+        max = (n1 > n2) ? n1 : n2;
+        // Print the largest number
+        System.out.println("Maximum is = " + max);

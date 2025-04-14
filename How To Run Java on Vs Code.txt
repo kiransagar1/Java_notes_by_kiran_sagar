@@ -1,0 +1,10 @@
+How To Run Java on Vs Code?
+
+Step:1 Install Java
+https://www.oracle.com/in/java/technologies/downloadsStep:2 Install Vs Code
+https://code.visualstudio.com/
+Step:3 Setting a Path 
+Step:4 Connect Java and Vs Code
+Step:5 Run a Java Program on Vs Code
+Code Pack For Java
+https://code.visualstudio.com/docs/languages/java

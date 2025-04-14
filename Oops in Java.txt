@@ -1,0 +1,297 @@
+Java OOP(Object Oriented Programming) Concepts
+    Java OOPs concept refers to programming languages that use objects in programming.They use objects as a primary source to implement what is to happen in the code.
+        Types of Java Oops or Pillars of Oops in Java
+            1.Java Class
+            2.Java Object
+            3.Inheritance 
+            4.Polymorphism
+            5.Data Abstraction
+            6.Encapsulation
+1.Java Class
+    A class defines a blueprint for objects.
+      1.A constructor is used to initialize an object when it is created.
+      2.Methods define behaviors or actions associated with the class.
+
+    Modifiers: A class can be public or have default access (Refer to this for details).
+    Class name: The class name should begin with the initial letter capitalized by convention.
+    Body: The class body is surrounded by braces, { }.
+
+    1.Data (Fields/Attributes):
+        Objects contain data in the form of variables, also called fields or attributes, which store information about the object. 
+    2.Behavior (Methods):
+        Objects also have methods, which are functions that define what the object can do. 
+    
+    For example: in real life, a car is an object. The car has attributes, such as weight and color, and methods, such as drive and brake.
+    Syntax:
+        public class ClassName {
+        // Fields (variables)
+        type fieldName;
+
+        // Constructor
+        public ClassName() {
+            // Initialization code
+        }
+
+        // Methods (behaviors)
+        public void methodName() {
+            // Method body
+        }
+    }
+2.Java Object
+    An object is an instance of the class.
+    Memory is allocated as soon as an object is created.
+    An object is a real-world entity such as a book, car, etc.
+    Objects can be created many times as per requirement.
+    Syntax:
+        ClassName objectName = new ClassName();.      
+Class and Object Example:
+    class Student {
+        // data member (also instance variable)
+        int id;
+        // data member (also instance variable)
+        String n;}
+        public class Main{
+            public static void main(String args[]) {
+                // creating an object of
+                // Student
+                Student s1 = new Student();
+                System.out.println(s1.id);
+                System.out.println(s1.n);
+            }
+        }
+Class With Methods
+
+    class Student{
+
+        int rollno;  
+        String name;
+
+        void insertRecord(int r, String n)
+        {  
+        rollno=r;  
+        name=n;  
+        }  
+
+        void displayInformation()
+        {
+        System.out.println(rollno+" "+name);
+        }
+
+        } 
+
+        public class Main{  
+        public static void main(String args[])
+        {  
+            Student s1=new Student();  
+            Student s2=new Student();  
+            s1.insertRecord(111,"kiran");  
+            s2.insertRecord(222,"Pythonlife");  
+            s1.displayInformation();  
+            s2.displayInformation();  
+        }  
+        }  
+Constructor in Oops
+    In Java, a constructor is a special method used to initialize objects of a class. 
+    It has the same name as the class, doesn't have a return type (not even void), 
+    and is automatically called when a new object is created
+    Rules for Creating Java Constructor
+There are following rules for defining a constructor:
+    Constructor name must be the same as its class name.
+    A Constructor must have no explicit return type.
+    A Java constructor cannot be abstract, static, final, and synchronized.
+Types of Constructor
+    1.Default Constructor (No-argument constructor)
+    2.Parameterized Constructor
+    3.Copy Constructor
+1.Default Constructor:
+    Rule: If there is no constructor in a class, compiler automatically creates a default constructor.
+            //Java Program to create and call a default constructor  
+        class Bike{  
+            //creating a default constructor  
+            Bike(){System.out.println("Bike is created");}  
+        }
+        public class Main{
+            //main method  
+            public static void main(String args[]){  
+                //calling a default constructor  
+                Bike b=new Bike();  
+            }  
+        }  
+2.Parameterized Constructor:
+    class Student{  
+        int id;  
+        String name;  
+        //creating a parameterized constructor  
+        Student(int i,String n){  
+        id = i;  
+        name = n;  
+        }  
+        //method to display the values  
+        void display(){System.out.println(id+" "+name);}  
+    }
+    //Main class to create objects and class methods
+    public class Main{
+        public static void main(String args[]){  
+        //creating objects and passing values  
+        Student s1 = new Student(111,"Joseph");  
+        Student s2 = new Student(222,"Sonoo");  
+        //calling method to display the values of object  
+        s1.display();  
+        s2.display();  
+    }  
+    }  
+3.Constructor OverLoading
+    Constructor overloading in Java is a technique of having more than one constructor with different parameter lists. 
+    They are arranged in a way that each constructor performs a different task. 
+    They are differentiated by the compiler by the number of parameters in the list and their types.
+
+    Example:
+        //Java program to overload constructors  
+        class Student{  
+            int id;  
+            String name;  
+            int age;  
+                //creating two arg constructor  
+            Student(int i,String n){  
+                id = i;  
+                name = n;  
+                }  
+                //creating three arg constructor  
+            Student(int i,String n,int a){  
+                id = i;  
+                name = n;  
+                age=a;  
+                }  
+                //creating method to display values
+            void display()
+            {
+                System.out.println(id+" "+name+" "+age);
+                }  
+            }
+        //creating a Main class to create instance and call methods
+        public class Main{
+            public static void main(String args[]){  
+            Student s1 = new Student(111,"Karan");  
+            Student s2 = new Student(222,"Aryan",25);  
+            s1.display();  
+            s2.display();  
+        }  
+        } 
+this keyword in Java
+    1.this can be used to refer current class instance variable.
+    2.this can be used to invoke current class method (implicitly)
+    3.this() can be used to invoke current class constructor.
+1) this: to refer current class instance variable
+    // Before This keyword
+    class Student{  
+        int rollno;  
+        String name;  
+        float fee;  
+
+        Student(int rollno,String name,float fee){  
+            rollno=rollno;  
+            name=name;  
+            fee=fee;  
+        }  
+        void display(){System.out.println(rollno+" "+name+" "+fee);}  
+        }  
+
+        public class Main{  
+        public static void main(String args[]){  
+        Student s1=new Student(111,"ankit",5000f);  
+        Student s2=new Student(112,"sumit",6000f);  
+        s1.display();  
+        s2.display();  
+        }}  
+   
+   
+    // After This keyword
+    class Student{  
+        int rollno;  
+        String name;  
+        float fee;  
+        Student(int rollno,String name,float fee){  
+        this.rollno=rollno;  
+        this.name=name;  
+        this.fee=fee;  
+        }  
+        void display(){System.out.println(rollno+" "+name+" "+fee);}  
+        }  
+        
+        public class Main{  
+        public static void main(String args[]){  
+        Student s1=new Student(111,"ankit",5000f);  
+        Student s2=new Student(112,"sumit",6000f);  
+        s1.display();  
+        s2.display();  
+        }}  
+2) this: to invoke current class method
+    class A{  
+        void m(){System.out.println("hello m");}  
+        void n(){  
+        System.out.println("hello n");  
+        //m();//same as this.m()  
+        this.m();  
+        }  
+        }  
+    public class Main{  
+    public static void main(String args[]){  
+    A a=new A();  
+    a.n();  
+    }}  
+3) this() : to invoke current class constructor
+            class A{  
+
+        A(){System.out.println("hello a");}  
+        A(int x){  
+            this();  
+            System.out.println(x);  
+        }  
+    }  
+    public class Main{  
+        public static void main(String args[]){  
+            A a=new A(10);  
+        }
+    }  
+3.Inheritance 
+    Inheritance in Java enables a class to inherit properties and actions from another class, called a superclass or parent class. 
+    A class derived from a superclass is called a subclass or child group. 
+Terms used in Inheritance
+    Class: A class is a group of objects which have common properties. It is a template or blueprint from which objects are created.
+    Sub Class/Child Class: Subclass is a class which inherits the other class. It is also called a derived class, extended class, or child class.
+    Super Class/Parent Class: Superclass is the class from where a subclass inherits the features. It is also called a base class or a parent class.
+    Reusability: As the name specifies, reusability is a mechanism which facilitates you to reuse the fields and methods of the existing class when you create a new class. You can use the same fields and methods already defined in the previous class.
+1.Single Inheritance: One class inherits from one parent class.
+2.Multiple Inheritance: One class inherits from multiple parent classes.
+3.Multilevel Inheritance: A class inherits from another class, and a third class inherits from that class.
+4.Hierarchical Inheritance: Multiple classes inherit from a single parent class.
+5.Hybrid Inheritance: A mix of different types of inheritance (e.g., combining multiple and multilevel inheritance).
+4.Polymorphism
+        The word ‘polymorphism’ means ‘having many forms’. 
+        In Java, polymorphism refers to the ability of a message to be displayed in more than one form.
+    Polymorphism are Two Types:
+    1.Method OverLoading
+    2.Method Overriding      
+5.Encapsulation
+    Encapsulation in Java is a process of wrapping code and data together into a single unit, for example, 
+    a capsule which is mixed of several medicines.
+Access Modifiers in Java
+    There are 4 types of access modifiers available in Java: 
+        1.Default – No keyword required
+        2.Private
+        3.Protected
+        4.Public
+1.Default:When no access modifier is specified for a class, method, 
+    or data member,it is said to be having the default access modifier by default
+2.Public:When methods, variables, classes, and so on are declared public, 
+    then we can access them from anywhere. The public access modifier has no scope restriction
+3.Private:When variables and methods are declared private, 
+    they cannot be accessed outside of the class.
+4.Protected:When methods and data members are declared protected, 
+    we can access them within the same package as well as from subclasses.
+6.Data abstraction is the process of hiding certain details and showing only essential information to the user.
+    Abstraction can be achieved with either abstract classes or interfaces 
+    Abstract class: 
+    is a restricted class that cannot be used to create objects (to access it, it must be inherited from another class).
+    Abstract method: 
+    can only be used in an abstract class, and it does not have a body. The body is provided by the subclass (inherited from).
